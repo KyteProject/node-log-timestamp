@@ -12,5 +12,7 @@ function patch(fn) {
 
 // the default date format to print
 function timestamp() {
-  return '[' + new Date().toISOString() + ']';
+  let d = new Date();
+  d.setSeconds(0,0);
+  return '[' + d.toUTCString() + ']';
 }
